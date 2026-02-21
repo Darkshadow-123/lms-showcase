@@ -1,0 +1,8 @@
+{
+  "/page": "app/page.js",
+  "/smartboard/page": "app/smartboard/page.js",
+  "/features/page": "app/features/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/ai-features/page": "app/ai-features/page.js",
+  "/about/page": "app/about/page.js"
+}
