@@ -20,8 +20,8 @@ import {
 
 const faqs = [
   {
-    question: "What is EduPro LMS?",
-    answer: "EduPro is a comprehensive learning management system designed for schools, colleges, and coaching institutes. It combines AI-powered learning tools, smart classroom solutions, and administrative features to transform educational institutions.",
+    question: "What is Verity LMS?",
+    answer: "Verity is a comprehensive learning management system designed for schools, colleges, and coaching institutes. It combines AI-powered learning tools, smart classroom solutions, and administrative features to transform educational institutions.",
   },
   {
     question: "How long is the free trial?",
@@ -112,7 +112,7 @@ export default function ContactPage() {
               </span>
             </h1>
             <p className="text-xl text-secondary-600 max-w-2xl mx-auto leading-relaxed">
-              Have questions about EduPro? We'd love to hear from you. Send us a message 
+              Have questions about Verity? We'd love to hear from you. Send us a message 
               or schedule a demo to see our platform in action.
             </p>
           </motion.div>
@@ -226,7 +226,7 @@ export default function ContactPage() {
                   </h2>
                 </div>
                 <p className="text-white/80 mb-6 text-lg">
-                  See EduPro in action with a personalized demo tailored to your institution's needs.
+                  See Verity in action with a personalized demo tailored to your institution's needs.
                 </p>
                 <ul className="space-y-3">
                   {[

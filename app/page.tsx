@@ -21,10 +21,10 @@ import {
 import { cn } from "@/lib/utils";
 
 const stats = [
-  { value: "500+", label: "Schools" },
-  { value: "2M+", label: "Students" },
-  { value: "50K+", label: "Teachers" },
-  { value: "10M+", label: "Classes" },
+  { value: "10+", label: "Schools" },
+  { value: "200+", label: "Students" },
+  { value: "50+", label: "Teachers" },
+  { value: "10+", label: "Classes" },
 ];
 
 const features = [
@@ -46,12 +46,12 @@ const features = [
     description: "Real-time insights into student performance, attendance, and engagement metrics.",
     color: "from-green-500 to-emerald-500",
   },
-  {
-    icon: Video,
-    title: "Live Classes",
-    description: "Seamless virtual classroom experience with screen sharing, whiteboard, and breakout rooms.",
-    color: "from-orange-500 to-red-500",
-  },
+  // {
+  //   icon: Video,
+  //   title: "Live Classes",
+  //   description: "Seamless virtual classroom experience with screen sharing, whiteboard, and breakout rooms.",
+  //   color: "from-orange-500 to-red-500",
+  // },
   {
     icon: Users,
     title: "Attendance Tracking",
@@ -68,7 +68,7 @@ const features = [
 
 const testimonials = [
   {
-    quote: "EduPro has transformed how our teachers deliver lessons. The AI-powered analytics help us identify struggling students early and provide targeted support.",
+    quote: "Verity has transformed how our teachers deliver lessons. The AI-powered analytics help us identify struggling students early and provide targeted support.",
     author: "Dr. Sarah Mitchell",
     role: "Principal",
     institution: "Delhi International School",
@@ -91,8 +91,7 @@ const testimonials = [
 ];
 
 const trustedBy = [
-  "Delhi Public School", "Maharaja's College", "Ryan International",
-  "National Public School", "DAV Public School", "JNV Schools"
+  "Maharashtra", "Bihar", "West Bengal", "Tamil Nadu", "Karnataka", "Andhra Pradesh"
 ];
 
 export default function Home() {
@@ -118,8 +117,8 @@ export default function Home() {
                 transition={{ delay: 0.1 }}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 to-purple-500/10 text-primary-600 font-semibold text-sm mb-6 border border-primary/20"
               >
-                <Sparkles className="w-4 h-4" />
-                Trusted by 500+ Educational Institutions
+                
+                Trusted in  5+ States
               </motion.div>
               
               <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-secondary-900 leading-[1.1] mb-6">
@@ -156,12 +155,6 @@ export default function Home() {
                   <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
                     <CheckCircle2 className="w-4 h-4 text-green-600" />
                   </div>
-                  <span className="text-secondary-600 font-medium">Free Trial</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
-                    <CheckCircle2 className="w-4 h-4 text-green-600" />
-                  </div>
                   <span className="text-secondary-600 font-medium">No Credit Card</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -189,7 +182,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="text-white/80 text-sm font-medium">
-                    EduPro Dashboard
+                    Verity Dashboard
                   </div>
                   <div className="w-16" />
                 </div>
@@ -263,7 +256,7 @@ export default function Home() {
       <section className="py-12 bg-white border-y border-secondary-100">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-center text-secondary-500 font-medium mb-8">
-            Trusted by leading educational institutions across India
+            Trusted by leading educational institutions across many States
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50">
             {trustedBy.map((school) => (
@@ -378,8 +371,7 @@ export default function Home() {
                   "Automated attendance management",
                   "AI-powered learning recommendations",
                   "Customizable reports and analytics",
-                  "Parent portal integration",
-                  "Fee management and invoicing",
+                  "Seamless integration with smartboards and virtual classrooms",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-secondary-700 font-medium">
                     <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
@@ -530,7 +522,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-secondary-50">
+      {/* <section className="py-24 bg-secondary-50">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -545,7 +537,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-lg text-secondary-600">
-              See what school administrators, teachers, and parents are saying about EduPro
+              See what school administrators, teachers, and parents are saying about Verity
             </p>
           </motion.div>
 
@@ -580,7 +572,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-24 bg-white relative overflow-hidden">
@@ -597,7 +589,7 @@ export default function Home() {
               Ready to Transform Your Institution?
             </h2>
             <p className="text-xl text-secondary-600 mb-10 max-w-2xl mx-auto">
-              Join 500+ educational institutions already using EduPro to deliver 
+              Join 500+ educational institutions already using Verity to deliver 
               world-class education with the power of AI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

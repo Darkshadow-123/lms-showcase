@@ -354,7 +354,7 @@ export default function AIFeaturesPage() {
                       <div className="w-3 h-3 rounded-full bg-yellow-400" />
                       <div className="w-3 h-3 rounded-full bg-green-400" />
                     </div>
-                    <span className="text-white/80 text-sm">EduPro AI Tutor</span>
+                    <span className="text-white/80 text-sm">Verity AI Tutor</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />

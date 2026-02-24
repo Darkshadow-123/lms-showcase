@@ -23,7 +23,7 @@ const timeline = [
   {
     year: "2024",
     title: "Foundation",
-    description: "EduPro was founded with a mission to transform education through technology",
+    description: "Verity was founded with a mission to transform education through technology",
     completed: true,
   },
   {
@@ -107,7 +107,7 @@ export default function AboutPage() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-purple-600 font-semibold text-sm mb-6 border border-purple-500/20"
             >
               <Heart className="w-4 h-4" />
-              About EduPro
+              About Verity
             </motion.div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-secondary-900 mb-6 leading-tight">
@@ -125,7 +125,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="py-16 bg-gradient-to-r from-primary to-purple-600 relative overflow-hidden">
+      {/* <section className="py-16 bg-gradient-to-r from-primary to-purple-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')]" />
         
         <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
@@ -150,7 +150,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Mission & Vision */}
       <section className="py-24 bg-white">

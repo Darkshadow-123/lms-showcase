@@ -1,4 +1,4 @@
-# EduPro LMS Showcase
+# Verity LMS Showcase
 
 A modern, static LMS (Learning Management System) product showcase website built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion.
 

@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, BookOpen, Sparkles } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -48,18 +49,24 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <nav className="flex items-center justify-between">
-          {/* Logo */}
+{/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <motion.div
               whileHover={{ scale: 1.1, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
-              className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary via-primary to-purple-600 flex items-center justify-center shadow-lg shadow-primary-500/30 group-hover:shadow-primary-500/50 transition-all"
+              className="w-18 h-18 rounded-2xl bg-white flex items-center justify-center shadow-lg shadow-gray-200 group-hover:shadow-gray-300 transition-all border border-gray-100"
             >
               <motion.div
                 animate={{ rotate: [0, 10, -10, 0] }}
                 transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
               >
-                <BookOpen className="w-6 h-6 text-white" />
+                <Image
+                  src="/images/Logo.png"
+                  alt="Verity Logo"
+                  width={32}
+                  height={32}
+                  className="w-20 h-20 object-contain"
+                />
               </motion.div>
             </motion.div>
             <motion.div
@@ -68,10 +75,10 @@ export default function Navbar() {
               transition={{ delay: 0.2 }}
             >
               <span className="font-heading font-bold text-2xl text-secondary-900">
-                Edu
+                Ve
               </span>
               <span className="font-heading font-bold text-2xl bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
-                Pro
+                rity
               </span>
             </motion.div>
           </Link>

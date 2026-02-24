@@ -80,13 +80,7 @@ const features = [
     benefits: ["Real-time updates", "Two-way communication", "App notifications"],
     color: "from-indigo-500 to-purple-500",
   },
-  {
-    icon: CreditCard,
-    title: "Fee Management",
-    description: "Streamline fee collection with online payments, automated reminders, invoice generation, and financial reporting.",
-    benefits: ["Online payments", "Automated reminders", "Financial reports"],
-    color: "from-teal-500 to-green-500",
-  },
+
   {
     icon: Library,
     title: "Library Management",
@@ -266,7 +260,7 @@ export default function FeaturesPage() {
                   <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
                   <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
                 </div>
-                <span className="text-sm text-secondary-500 ml-2">EduPro Dashboard</span>
+                <span className="text-sm text-secondary-500 ml-2">Verity Dashboard</span>
               </div>
               <div className="flex gap-4 text-sm">
                 <span className="text-secondary-600">Students</span>
@@ -321,7 +315,7 @@ export default function FeaturesPage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 bg-white">
+      {/* <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -394,7 +388,7 @@ export default function FeaturesPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-primary to-purple-600 relative overflow-hidden">
@@ -411,7 +405,7 @@ export default function FeaturesPage() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-white/80 mb-10">
-              Join 500+ institutions already transforming education with EduPro. Start your free trial today.
+              Join 500+ institutions already transforming education with Verity. Start your free trial today.
             </p>
             <Link
               href="/contact"

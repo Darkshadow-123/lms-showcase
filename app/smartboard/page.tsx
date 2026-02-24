@@ -172,7 +172,7 @@ export default function SmartboardPage() {
                     </div>
                   </div>
                   <div className="text-white/80 text-sm font-medium">
-                    EduPro Smartboard
+                    Verity Smartboard
                   </div>
                   <div className="w-16" />
                 </div>
@@ -301,7 +301,7 @@ export default function SmartboardPage() {
               </span>
             </h2>
             <p className="text-lg text-secondary-400">
-              See how EduPro Smartboard transforms learning outcomes across institutions
+              See how Verity Smartboard transforms learning outcomes across institutions
             </p>
           </motion.div>
 
@@ -339,7 +339,7 @@ export default function SmartboardPage() {
               See It In Action
             </h2>
             <p className="text-lg text-secondary-600">
-              Watch how teachers and students use EduPro Smartboard in real classrooms
+              Watch how teachers and students use Verity Smartboard in real classrooms
             </p>
           </motion.div>
 
@@ -374,7 +374,7 @@ export default function SmartboardPage() {
               Loved by Teachers
             </h2>
             <p className="text-lg text-secondary-600">
-              See what educators are saying about EduPro Smartboard
+              See what educators are saying about Verity Smartboard
             </p>
           </motion.div>
 
@@ -426,7 +426,7 @@ export default function SmartboardPage() {
               Transform Your Classroom Today
             </h2>
             <p className="text-xl text-white/80 mb-10">
-              Get a free demonstration of EduPro Smartboard at your institution. No commitment required.
+              Get a free demonstration of Verity Smartboard at your institution. No commitment required.
             </p>
             <Link
               href="/contact"
