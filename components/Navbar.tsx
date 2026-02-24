@@ -75,10 +75,10 @@ export default function Navbar() {
               transition={{ delay: 0.2 }}
             >
               <span className="font-heading font-bold text-2xl text-secondary-900">
-                Ve
+                Verity
               </span>
               <span className="font-heading font-bold text-2xl bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
-                rity
+                LMS
               </span>
             </motion.div>
           </Link>
@@ -251,13 +251,13 @@ export default function Navbar() {
                 transition={{ delay: 0.3 }}
                 className="pt-4 space-y-3"
               >
-                <Link
+                {/* <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block w-full py-4 text-center rounded-xl font-semibold text-secondary-700 hover:bg-secondary-50 transition-colors border border-secondary-200"
                 >
                   Sign In
-                </Link>
+                </Link> */}
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}

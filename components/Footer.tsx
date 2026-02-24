@@ -21,12 +21,12 @@ const footerLinks = {
     { label: "Community", href: "/contact" },
     { label: "Contact", href: "/contact" },
   ],
-  legal: [
-    { label: "Privacy Policy", href: "/contact" },
-    { label: "Terms of Service", href: "/contact" },
-    { label: "Cookie Policy", href: "/contact" },
-    { label: "Security", href: "/contact" },
-  ],
+  // legal: [
+  //   { label: "Privacy Policy", href: "/contact" },
+  //   { label: "Terms of Service", href: "/contact" },
+  //   { label: "Cookie Policy", href: "/contact" },
+  //   { label: "Security", href: "/contact" },
+  // ],
 };
 
 const socialLinks = [
@@ -115,7 +115,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h4 className="font-heading font-semibold text-white mb-4">Legal</h4>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
@@ -129,7 +129,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className="border-t border-secondary-800 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">

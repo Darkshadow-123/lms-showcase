@@ -19,13 +19,13 @@ import {
 } from "lucide-react";
 
 const aiFeatures = [
-  {
-    icon: Brain,
-    title: "AI Homework Assistant",
-    description: "Intelligent homework help that provides step-by-step explanations and hints without giving away answers. Available 24/7 for students.",
-    color: "from-purple-500 to-pink-500",
-    benefits: ["Step-by-step guidance", "Instant feedback", "All subjects covered"],
-  },
+  // {
+  //   icon: Brain,
+  //   title: "AI Homework Assistant",
+  //   description: "Intelligent homework help that provides step-by-step explanations and hints without giving away answers. Available 24/7 for students.",
+  //   color: "from-purple-500 to-pink-500",
+  //   benefits: ["Step-by-step guidance", "Instant feedback", "All subjects covered"],
+  // },
   {
     icon: FileQuestion,
     title: "AI Quiz Generator",
@@ -72,7 +72,7 @@ const howItWorks = [
   },
   {
     step: "02",
-    title: "Analysis & Learning",
+    title: "Reports and Learning Analysis",
     description: "Machine learning algorithms analyze patterns to identify strengths, weaknesses, and learning preferences.",
     icon: Brain,
   },
@@ -129,7 +129,7 @@ export default function AIFeaturesPage() {
                   href="/contact"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 shadow-lg shadow-purple-500/30 transition-all hover:-translate-y-1"
                 >
-                  Try AI Demo
+                  Contact Us
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
