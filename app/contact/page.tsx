@@ -23,10 +23,7 @@ const faqs = [
     question: "What is Verity LMS?",
     answer: "Verity is a comprehensive learning management system designed for schools, colleges, and coaching institutes. It combines AI-powered learning tools, smart classroom solutions, and administrative features to transform educational institutions.",
   },
-  {
-    question: "How long is the free trial?",
-    answer: "We offer a 14-day free trial with full access to all features. No credit card required to start your trial.",
-  },
+
   {
     question: "Can I customize the platform for my institution?",
     answer: "Yes! Our Professional and Enterprise plans include custom branding options, custom integrations, and configurable features to match your institution's specific needs.",
@@ -48,9 +45,10 @@ const faqs = [
     answer: "Yes, our parent portal allows parents to track their child's attendance, homework, grades, and communicate with teachers.",
   },
   {
-    question: "What payment methods do you accept?",
-    answer: "We accept all major credit/debit cards, UPI, bank transfers, and Cheque/DD for annual plans. We also offer EMI options.",
-  },
+    question: "Can Parents access the Platform?",
+    answer: "Yes, our parent portal allows parents to track their child's attendance, homework, grades, and communicate with teachers. A customized report regarding the child performance will be sent via email for regular analysis.",
+  }
+
 ];
 
 export default function ContactPage() {

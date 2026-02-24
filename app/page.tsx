@@ -91,7 +91,16 @@ const testimonials = [
 ];
 
 const trustedBy = [
-  "Maharashtra", "Bihar", "West Bengal", "Tamil Nadu", "Karnataka", "Andhra Pradesh"
+  "Arunachal pradesh",
+"Assam",
+"Bihar",
+"Manipur", 
+"Mizoram",
+"Meghalaya",
+"Nagaland",
+"Sikkim",
+"Tripura",
+"West Bengal"
 ];
 
 export default function Home() {
@@ -150,7 +159,7 @@ export default function Home() {
                 </Link>
               </div>
               
-              <div className="flex flex-wrap items-center gap-6 text-sm">
+              {/* <div className="flex flex-wrap items-center gap-6 text-sm">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
                     <CheckCircle2 className="w-4 h-4 text-green-600" />
@@ -163,7 +172,7 @@ export default function Home() {
                   </div>
                   <span className="text-secondary-600 font-medium">24/7 Support</span>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
 
             <motion.div
@@ -362,15 +371,12 @@ export default function Home() {
                 </span>
               </h2>
               <p className="text-lg text-secondary-600 mb-8">
-                Get comprehensive insights with our intuitive dashboard. Monitor student progress, 
-                track attendance, manage courses, and generate reports - all from one place.
+                Get comprehensive insights with our intuitive dashboard. Monitor student progress, manage courses, and generate reports - all from one place.
               </p>
               <ul className="space-y-4">
                 {[
                   "Real-time student performance tracking",
-                  "Automated attendance management",
                   "AI-powered learning recommendations",
-                  "Customizable reports and analytics",
                   "Seamless integration with smartboards and virtual classrooms",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-secondary-700 font-medium">
