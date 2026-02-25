@@ -41,10 +41,6 @@ const faqs = [
     answer: "Absolutely. We use enterprise-grade security with data encryption, regular backups, and compliance with educational data privacy regulations.",
   },
   {
-    question: "Can parents access the platform?",
-    answer: "Yes, our parent portal allows parents to track their child's attendance, homework, grades, and communicate with teachers.",
-  },
-  {
     question: "Can Parents access the Platform?",
     answer: "Yes, our parent portal allows parents to track their child's attendance, homework, grades, and communicate with teachers. A customized report regarding the child performance will be sent via email for regular analysis.",
   }
@@ -351,15 +347,15 @@ export default function ContactPage() {
               {
                 icon: Phone,
                 title: "Phone",
-                details: "+91 1800 123 4567",
-                subtitle: "Mon-Sat, 9AM-7PM",
+                details: " +91 9330241335",
+                subtitle: "Mon-Fri, 9AM-7PM",
                 color: "from-green-500 to-emerald-500",
               },
               {
                 icon: Mail,
                 title: "Email",
-                details: "support@edupro.com",
-                subtitle: "We'll respond within 24 hours",
+                details: "rustin@junkysolution.com",
+                subtitle: "We'll respond within 48 hours",
                 color: "from-purple-500 to-pink-500",
               },
               {
