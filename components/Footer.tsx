@@ -54,11 +54,11 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm">
                 <Phone className="w-4 h-4 text-primary-light" />
-                <span>+91 1800 123 4567</span>
+                <span>+91 9330241335</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Mail className="w-4 h-4 text-primary-light" />
-                <span>support@edupro.com</span>
+                <span>rustin@junkysolution.com</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <MapPin className="w-4 h-4 text-primary-light" />

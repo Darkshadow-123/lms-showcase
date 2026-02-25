@@ -48,32 +48,74 @@ const timeline = [
 
 const team = [
   {
-    name: "Dr. Rajesh Kumar",
-    role: "Founder & CEO",
-    bio: "Former IIT professor with 20+ years in EdTech",
-    image: "RK",
+    name: "Rustin Alpin",
+    role: "CEO & Tech Lead",
+    bio: "Leading technology and strategic vision",
+    image: "RA",
     color: "from-primary to-purple-500",
   },
   {
-    name: "Priya Sharma",
-    role: "Chief Product Officer",
-    bio: "Ex-Teachmint, 15 years in product management",
-    image: "PS",
+    name: "Rishikesh Kumar",
+    role: "UI/UX Design",
+    bio: "Crafting intuitive user experiences",
+    image: "RK",
     color: "from-purple-500 to-pink-500",
   },
   {
-    name: "Amit Singh",
-    role: "Head of AI",
-    bio: "PhD in Machine Learning from Stanford",
-    image: "AS",
+    name: "Rishi Lalwani",
+    role: "SDE",
+    bio: "Software development engineer",
+    image: "RL",
     color: "from-pink-500 to-rose-500",
   },
   {
-    name: "Sneha Patel",
-    role: "Head of Education",
-    bio: "Former school principal, curriculum expert",
-    image: "SP",
+    name: "Rovan Fernandes",
+    role: "SDE",
+    bio: "Software development engineer",
+    image: "RF",
     color: "from-rose-500 to-orange-500",
+  },
+  {
+    name: "Suraj Saini",
+    role: "SRE & DevOps",
+    bio: "Infrastructure and reliability engineering",
+    image: "SS",
+    color: "from-orange-500 to-amber-500",
+  },
+  {
+    name: "Francis Alpin",
+    role: "Procurement & Logistics",
+    bio: "Managing resources and operations",
+    image: "FA",
+    color: "from-amber-500 to-yellow-500",
+  },
+  {
+    name: "Craig Gomes",
+    role: "Customer Success",
+    bio: "Ensuring client satisfaction",
+    image: "CG",
+    color: "from-yellow-500 to-lime-500",
+  },
+  {
+    name: "Roberto Bhaju",
+    role: "Customer Success & Operations",
+    bio: "Operations support and client success",
+    image: "RB",
+    color: "from-lime-500 to-green-500",
+  },
+  {
+    name: "Rajani Tamang",
+    role: "Director",
+    bio: "Strategic leadership and governance",
+    image: "RT",
+    color: "from-green-500 to-emerald-500",
+  },
+  {
+    name: "Arun Puri",
+    role: "Director",
+    bio: "Strategic leadership and governance",
+    image: "AP",
+    color: "from-emerald-500 to-teal-500",
   },
 ];
 
@@ -197,6 +239,75 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* About VerityLMS */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white to-purple-500/10" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-5xl mx-auto"
+          >
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-primary/20 to-purple-500/20 text-primary-dark text-sm font-semibold rounded-full mb-4">
+                Why Choose Us
+              </span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold bg-gradient-to-r from-secondary-900 via-primary to-purple-600 bg-clip-text text-transparent mb-6">
+                About VerityLMS
+              </h2>
+              <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-purple-500 mx-auto rounded-full" />
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div className="space-y-6">
+                <p className="text-xl md:text-2xl text-secondary-700 font-light leading-relaxed">
+                  VerityLMS is a <span className="font-semibold text-primary">next-generation Learning Management System</span> that personalizes learning experiences, simplifies teaching methods, and delivers measurable results.
+                </p>
+                <p className="text-lg text-secondary-600 leading-relaxed">
+                  Whether you're educating students or scaling knowledge across teams, VerityLMS adapts to the way people actually learn.
+                </p>
+                <p className="text-lg text-secondary-600 leading-relaxed">
+                  From classrooms to boardrooms, we support educational institutions that believe learning should be <span className="font-semibold text-secondary-800">engaging, flexible, and measurable</span>—not rigid or complicated. Our platform is trusted by institutes that value outcomes over checklists and impact over appearances.
+                </p>
+              </div>
+              
+              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/50 relative">
+                <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-primary to-purple-500 rounded-xl flex items-center justify-center">
+                  <Sparkles className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-secondary-900 mb-4">What Makes VerityLMS Different</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 mt-3 rounded-full bg-gradient-to-r from-primary to-purple-500 flex-shrink-0" />
+                    <p className="text-lg text-secondary-700 font-medium">Built for humans. Powered by intelligence.</p>
+                  </div>
+                  <p className="text-secondary-600 leading-relaxed pl-5">
+                    VerityLMS isn't just another learning management system. It's designed around how people absorb information, build skills, and apply knowledge—using <span className="font-semibold text-primary">intelligent personalization</span>, <span className="font-semibold text-purple-600">intuitive design</span>, and insights that actually mean something.
+                  </p>
+                </div>
+                <div className="mt-6 pt-6 border-t border-secondary-100 flex gap-4">
+                  <div className="flex items-center gap-2 text-secondary-600">
+                    <Zap className="w-5 h-5 text-amber-500" />
+                    <span className="font-medium">Fast</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-secondary-600">
+                    <Heart className="w-5 h-5 text-red-500" />
+                    <span className="font-medium">Intuitive</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-secondary-600">
+                    <Globe className="w-5 h-5 text-blue-500" />
+                    <span className="font-medium">Scalable</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Timeline */}
       <section className="py-24 bg-secondary-50">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
@@ -268,7 +379,7 @@ export default function AboutPage() {
               Meet Our Team
             </h2>
             <p className="text-lg text-secondary-600">
-              A passionate group of educators, technologists, and innovators working together to transform education
+              Meet the dedicated team behind VerityLMS, working together to transform education
             </p>
           </motion.div>
 

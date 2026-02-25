@@ -54,8 +54,8 @@ const features = [
   // },
   {
     icon: Users,
-    title: "Attendance Tracking",
-    description: "Automated attendance management with facial recognition and geofencing options.",
+    title: "Homework Management",
+    description: "Automated homework assignment and tracking.",
     color: "from-pink-500 to-rose-500",
   },
   {
@@ -375,9 +375,14 @@ export default function Home() {
               </p>
               <ul className="space-y-4">
                 {[
-                  "Real-time student performance tracking",
-                  "AI-powered learning recommendations",
-                  "Seamless integration with smartboards and virtual classrooms",
+                   "AI-driven content recommendations",
+                   "Progress and performance dashboards",
+                   "Unique Assessments for each student",
+                   "Role-based access control",
+                   "Mobile-friendly learning experience",
+                   "Integrations with existing tools",
+                   "Secure virtual infrastructure",
+                   "Auto-generated Reports of Student performance"
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-secondary-700 font-medium">
                     <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
@@ -484,8 +489,8 @@ export default function Home() {
                 icon: Brain,
               },
               {
-                title: "Learning Paths",
-                description: "Personalized curriculum based on each student's pace",
+                title: "Student Friendly Notes Generation",
+                description: "Notes generated from respective modules for easier interpretation for students",
                 icon: BookMarked,
               },
               {

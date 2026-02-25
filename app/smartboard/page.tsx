@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { 
@@ -370,44 +371,55 @@ export default function SmartboardPage() {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-secondary-900 mb-4">
-              Loved by Teachers
-            </h2>
-            <p className="text-lg text-secondary-600">
-              See what educators are saying about Verity Smartboard
-            </p>
+           
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.author}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-secondary-50 rounded-2xl p-8"
-              >
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                  ))}
+          <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="relative"
+            >
+              <div className="bg-white rounded-3xl shadow-2xl shadow-primary-500/10 border border-secondary-100 overflow-hidden">
+                <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-4 flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <div className="flex gap-2">
+                      <div className="w-3 h-3 rounded-full bg-red-400" />
+                      <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                      <div className="w-3 h-3 rounded-full bg-green-400" />
+                    </div>
+                  </div>
+                  <div className="text-white/80 text-sm font-medium">
+                    Verity Smartboard
+                  </div>
+                  <div className="w-16" />
                 </div>
-                <p className="text-secondary-600 mb-6 leading-relaxed">
-                  "{testimonial.quote}"
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-lg">
-                    {testimonial.author.charAt(0)}
+                  <div className="p-6 bg-secondary-50 min-h-[300px]">
+                    <div className="bg-white rounded-2xl p-5 h-full border border-secondary-100 overflow-hidden">
+                      <Image
+                        src="/images/smartboard.jpeg"
+                        alt="Verity Smartboard"
+                        width={800}
+                        height={500}
+                        className="w-full h-auto object-contain rounded-lg"
+                      />
+                    </div>
                   </div>
-                  <div>
-                    <div className="font-semibold text-secondary-900">{testimonial.author}</div>
-                    <div className="text-sm text-secondary-500">{testimonial.role}, {testimonial.institution}</div>
-                  </div>
+              </div>
+              
+              <motion.div
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 3, repeat: Infinity }}
+                className="absolute -bottom-6 -right-6 w-24 h-24 bg-white rounded-2xl shadow-2xl p-4 border border-secondary-100"
+              >
+                <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                  <Monitor className="w-10 h-10 text-white" />
                 </div>
               </motion.div>
-            ))}
-          </div>
+            </motion.div>
+
+
+
+          
         </div>
       </section>
 
