@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import Link from "next/link";
 import { 
   Mail, 
@@ -49,6 +50,9 @@ const faqs = [
 
 export default function ContactPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isDemoSubmitting, setIsDemoSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -63,15 +67,75 @@ export default function ContactPage() {
     institution: "",
     students: "",
   });
+  
+  const messageFormRef = useRef<HTMLFormElement>(null);
+  const demoFormRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you for your message! We'll get back to you soon.");
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_MESSAGE;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error("Missing EmailJS environment variables");
+      setSubmitStatus("error");
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      await emailjs.sendForm(
+        serviceId,
+        templateId,
+        messageFormRef.current!,
+        publicKey
+      );
+      setSubmitStatus("success");
+      messageFormRef.current?.reset();
+      setFormData({ name: "", email: "", phone: "", institution: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  const handleDemoSubmit = (e: React.FormEvent) => {
+  const handleDemoSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you for your interest! Our team will contact you to schedule your demo.");
+    setIsDemoSubmitting(true);
+
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_DEMO;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error("Missing EmailJS environment variables");
+      alert("Configuration error. Please try again later.");
+      setIsDemoSubmitting(false);
+      return;
+    }
+
+    try {
+      await emailjs.sendForm(
+        serviceId,
+        templateId,
+        demoFormRef.current!,
+        publicKey
+      );
+      alert("Thank you for your interest! Our team will contact you to schedule your demo.");
+      demoFormRef.current?.reset();
+      setDemoData({ name: "", email: "", phone: "", institution: "", students: "" });
+    } catch (error) {
+      console.error("EmailJS Demo Error:", error);
+      alert("Failed to send request. Please try again later.");
+    } finally {
+      setIsDemoSubmitting(false);
+    }
   };
 
   return (
@@ -126,7 +190,7 @@ export default function ContactPage() {
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-secondary-900 mb-6">
                 Send us a Message
               </h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={messageFormRef} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-secondary-700 mb-2">
@@ -145,8 +209,9 @@ export default function ContactPage() {
                     <label className="block text-sm font-semibold text-secondary-700 mb-2">
                       Email Address *
                     </label>
-                    <input
+<input
                       type="email"
+                      name="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -160,8 +225,9 @@ export default function ContactPage() {
                     <label className="block text-sm font-semibold text-secondary-700 mb-2">
                       Phone Number
                     </label>
-                    <input
+<input
                       type="tel"
+                      name="phone"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-5 py-4 rounded-2xl border-2 border-secondary-100 focus:border-primary focus:outline-none transition-colors"
@@ -172,8 +238,9 @@ export default function ContactPage() {
                     <label className="block text-sm font-semibold text-secondary-700 mb-2">
                       Institution Name
                     </label>
-                    <input
+<input
                       type="text"
+                      name="institution"
                       value={formData.institution}
                       onChange={(e) => setFormData({ ...formData, institution: e.target.value })}
                       className="w-full px-5 py-4 rounded-2xl border-2 border-secondary-100 focus:border-primary focus:outline-none transition-colors"
@@ -185,7 +252,8 @@ export default function ContactPage() {
                   <label className="block text-sm font-semibold text-secondary-700 mb-2">
                     Message *
                   </label>
-                  <textarea
+<textarea
+                    name="message"
                     required
                     rows={5}
                     value={formData.message}
@@ -194,11 +262,12 @@ export default function ContactPage() {
                     placeholder="Tell us about your requirements..."
                   />
                 </div>
-                <button
+<button
                   type="submit"
-                  className="w-full py-5 rounded-2xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl hover:shadow-primary-500/25 hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
+                  disabled={isSubmitting}
+                  className="w-full py-5 rounded-2xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl hover:shadow-primary-500/25 hover:-translate-y-1 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                   <Send className="w-5 h-5" />
                 </button>
               </form>
@@ -239,7 +308,7 @@ export default function ContactPage() {
                 </ul>
               </div>
 
-              <form onSubmit={handleDemoSubmit} className="space-y-6 bg-secondary-50 p-8 rounded-3xl">
+              <form ref={demoFormRef} onSubmit={handleDemoSubmit} className="space-y-6 bg-secondary-50 p-8 rounded-3xl">
                 <h3 className="text-xl font-heading font-semibold text-secondary-900 mb-4">
                   Schedule Your Demo
                 </h3>
@@ -248,8 +317,9 @@ export default function ContactPage() {
                     <label className="block text-sm font-semibold text-secondary-700 mb-2">
                       Full Name *
                     </label>
-                    <input
+<input
                       type="text"
+                      name="name"
                       required
                       value={demoData.name}
                       onChange={(e) => setDemoData({ ...demoData, name: e.target.value })}
@@ -261,8 +331,9 @@ export default function ContactPage() {
                     <label className="block text-sm font-semibold text-secondary-700 mb-2">
                       Email Address *
                     </label>
-                    <input
+<input
                       type="email"
+                      name="email"
                       required
                       value={demoData.email}
                       onChange={(e) => setDemoData({ ...demoData, email: e.target.value })}
@@ -276,8 +347,9 @@ export default function ContactPage() {
                     <label className="block text-sm font-semibold text-secondary-700 mb-2">
                       Phone Number *
                     </label>
-                    <input
+<input
                       type="tel"
+                      name="phone"
                       required
                       value={demoData.phone}
                       onChange={(e) => setDemoData({ ...demoData, phone: e.target.value })}
@@ -289,7 +361,8 @@ export default function ContactPage() {
                     <label className="block text-sm font-semibold text-secondary-700 mb-2">
                       Number of Students
                     </label>
-                    <select
+<select
+                      name="students"
                       value={demoData.students}
                       onChange={(e) => setDemoData({ ...demoData, students: e.target.value })}
                       className="w-full px-5 py-4 rounded-2xl border-2 border-secondary-100 focus:border-primary focus:outline-none transition-colors bg-white"
@@ -306,20 +379,22 @@ export default function ContactPage() {
                   <label className="block text-sm font-semibold text-secondary-700 mb-2">
                     Institution Name *
                   </label>
-                  <input
-                    type="text"
-                    required
-                    value={demoData.institution}
+<input
+                      type="text"
+                      name="institution"
+                      required
+                      value={demoData.institution}
                     onChange={(e) => setDemoData({ ...demoData, institution: e.target.value })}
                     className="w-full px-5 py-4 rounded-2xl border-2 border-secondary-100 focus:border-primary focus:outline-none transition-colors bg-white"
                     placeholder="Your school/college name"
                   />
                 </div>
-                <button
+<button
                   type="submit"
-                  className="w-full py-5 rounded-2xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl hover:shadow-primary-500/25 hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
+                  disabled={isDemoSubmitting}
+                  className="w-full py-5 rounded-2xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl hover:shadow-primary-500/25 hover:-translate-y-1 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Schedule Demo
+                  {isDemoSubmitting ? "Sending..." : "Schedule Demo"}
                   <Zap className="w-5 h-5" />
                 </button>
               </form>

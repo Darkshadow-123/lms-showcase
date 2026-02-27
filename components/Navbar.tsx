@@ -136,8 +136,8 @@ export default function Navbar() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden xl:flex items-center gap-3">
-            <motion.div
+          <div className="hidden xl:flex items-center">
+            {/* <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4, duration: 0.3 }}
@@ -153,7 +153,7 @@ export default function Navbar() {
                   className="absolute inset-0 bg-secondary-100"
                 />
               </Link>
-            </motion.div>
+            </motion.div> */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
