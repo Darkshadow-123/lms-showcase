@@ -198,6 +198,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="text"
+                      name="name"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
