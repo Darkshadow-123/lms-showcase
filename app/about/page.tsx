@@ -21,7 +21,7 @@ import {
 
 const timeline = [
   {
-    year: "2024",
+    year: "2025",
     title: "Foundation",
     description: "Verity was founded with a mission to transform education through technology",
     completed: true,
@@ -40,8 +40,8 @@ const timeline = [
   },
   {
     year: "2027",
-    title: "Global Expansion",
-    description: "Plans to expand to 50+ countries with multi-language support",
+    title: "Our mission",
+    description: "The mission is to educate more than 1M+ students through our platform",
     completed: false,
   },
 ];
