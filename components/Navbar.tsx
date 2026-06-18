@@ -49,7 +49,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <nav className="flex items-center justify-between">
-{/* Logo */}
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <motion.div
               whileHover={{ scale: 1.1, rotate: 5 }}
@@ -102,7 +102,7 @@ export default function Navbar() {
                   )}
                 >
                   <span className="relative z-10">{link.label}</span>
-                  
+
                   {/* Hover Background */}
                   <motion.div
                     initial={{ scale: 0, opacity: 0 }}
@@ -112,7 +112,7 @@ export default function Navbar() {
                       isActive(link.href) ? "bg-primary/10" : "bg-secondary-100"
                     )}
                   />
-                  
+
                   {/* Active Indicator */}
                   {isActive(link.href) && (
                     <motion.div
@@ -121,7 +121,7 @@ export default function Navbar() {
                       transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                     />
                   )}
-                  
+
                   {/* Animated Underline on Hover */}
                   {!isActive(link.href) && (
                     <motion.div
@@ -136,7 +136,7 @@ export default function Navbar() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden xl:flex items-center">
+          <div className="hidden xl:flex items-center gap-4">
             {/* <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -154,6 +154,12 @@ export default function Navbar() {
                 />
               </Link>
             </motion.div> */}
+            <Link
+              href="/mock-url"
+              className="px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl hover:shadow-primary-500/25 hover:-translate-y-0.5 transition-all flex items-center justify-center"
+            >
+              Try For Free
+            </Link>
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -170,7 +176,7 @@ export default function Navbar() {
                   <Sparkles className="w-4 h-4" />
                 </motion.span>
                 <span className="relative z-10">Book a Demo</span>
-                
+
                 {/* Shine Effect */}
                 <motion.div
                   initial={{ x: "-100%", opacity: 0 }}
@@ -212,7 +218,7 @@ export default function Navbar() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="xl:hidden glass border-t border-secondary-100 overflow-hidden"
           >
-            <motion.div 
+            <motion.div
               className="container mx-auto px-4 py-4 space-y-2"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -258,6 +264,13 @@ export default function Navbar() {
                 >
                   Sign In
                 </Link> */}
+                <Link
+                  href="/mock-url"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block w-full py-4 text-center rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-white transition-colors"
+                >
+                  Try For Free
+                </Link>
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
