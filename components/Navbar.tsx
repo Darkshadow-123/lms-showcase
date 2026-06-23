@@ -155,7 +155,7 @@ export default function Navbar() {
               </Link>
             </motion.div> */}
             <Link
-              href="/mock-url"
+              href="https://triallms-react.vercel.app/"
               className="px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl hover:shadow-primary-500/25 hover:-translate-y-0.5 transition-all flex items-center justify-center"
             >
               Try For Free
