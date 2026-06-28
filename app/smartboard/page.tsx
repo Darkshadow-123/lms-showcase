@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -103,6 +104,8 @@ const testimonials = [
 ];
 
 export default function SmartboardPage() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <>
       {/* Hero Section */}
@@ -148,13 +151,13 @@ export default function SmartboardPage() {
                   Request Demo
                   <ArrowRight className="w-5 h-5" />
                 </Link>
-                <Link
-                  href="#features"
+                <button
+                  onClick={() => setIsVideoOpen(true)}
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-semibold bg-white text-secondary-700 border-2 border-secondary-200 hover:border-primary hover:text-primary transition-all"
                 >
                   <Play className="w-5 h-5" />
                   See It In Action
-                </Link>
+                </button>
               </div>
             </motion.div>
 
@@ -350,12 +353,22 @@ export default function SmartboardPage() {
             viewport={{ once: true }}
             className="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-4xl mx-auto"
           >
-            <div className="relative aspect-video bg-gradient-to-br from-secondary-800 to-secondary-900 flex items-center justify-center">
-              <div className="w-24 h-24 rounded-full bg-white/10 flex items-center justify-center cursor-pointer hover:bg-white/20 transition-colors group">
+            <div 
+              className="relative aspect-video flex items-center justify-center cursor-pointer overflow-hidden group"
+              onClick={() => setIsVideoOpen(true)}
+            >
+              <img 
+                src="https://img.youtube.com/vi/nA6mQTLLphE/maxresdefault.jpg" 
+                alt="Video Preview" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
+              
+              <div className="relative z-10 w-24 h-24 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:bg-white/30 transition-colors">
                 <Play className="w-10 h-10 text-white ml-1" />
               </div>
-              <div className="absolute bottom-6 left-6 right-6 text-white">
-                <div className="font-semibold text-lg">Watch Demo: Interactive Math Lesson</div>
+              <div className="absolute bottom-6 left-6 right-6 text-white z-10">
+                <div className="font-semibold text-lg drop-shadow-md">Watch Demo: Interactive Math Lesson</div>
               </div>
             </div>
           </motion.div>
@@ -450,6 +463,30 @@ export default function SmartboardPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Video Modal */}
+      {isVideoOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+          <div 
+            className="absolute inset-0" 
+            onClick={() => setIsVideoOpen(false)} 
+          />
+          <div className="relative w-full max-w-5xl aspect-video rounded-2xl overflow-hidden bg-black shadow-2xl z-10">
+            <button 
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute top-4 right-4 z-20 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+            >
+              ✕
+            </button>
+            <iframe 
+              src="https://www.youtube.com/embed/nA6mQTLLphE?autoplay=1" 
+              className="w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }
