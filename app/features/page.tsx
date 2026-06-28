@@ -17,6 +17,7 @@ import {
   ClipboardCheck,
   CheckCircle2,
   ArrowRight,
+  ScanText,
   Sparkles,
   Zap,
   Shield
@@ -30,6 +31,13 @@ const features = [
     description: "Our adaptive learning algorithm analyzes student performance and creates personalized learning paths that adapt to each student's unique pace and learning style.",
     benefits: ["Personalized curriculum", "Real-time adjustments", "Progress tracking"],
     color: "from-purple-500 to-pink-500",
+  },
+  {
+    icon: ScanText,
+    title: "Custom OCR Pipeline",
+    description: "Extract content directly from images and PDFs using our AI-powered OCR engine, instantly generating structured notes, homework, and assignments.",
+    benefits: ["Image & PDF extraction", "AI content generation", "Auto-formatted output"],
+    color: "from-yellow-500 to-orange-500",
   },
   {
     icon: GraduationCap,

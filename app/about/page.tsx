@@ -55,13 +55,6 @@ const team = [
     color: "from-primary to-purple-500",
   },
   {
-    name: "Rishikesh Kumar",
-    role: "UI/UX Design",
-    bio: "Crafting intuitive user experiences",
-    image: "RK",
-    color: "from-purple-500 to-pink-500",
-  },
-  {
     name: "Rishi Lalwani",
     role: "SDE",
     bio: "Software development engineer",
@@ -69,11 +62,11 @@ const team = [
     color: "from-pink-500 to-rose-500",
   },
   {
-    name: "Rovan Fernandes",
-    role: "SDE",
-    bio: "Software development engineer",
-    image: "RF",
-    color: "from-rose-500 to-orange-500",
+    name: "Vashistha Pradhan",
+    role: "COS",
+    bio: "Customer On-boarding & Technical Success",
+    image: "VP",
+    color: "from-pink-500 to-rose-500",
   },
   {
     name: "Suraj Saini",

@@ -12,6 +12,7 @@ import {
   ArrowRight,
   Play,
   CheckCircle2,
+  ScanText,
   Star,
   ChevronRight,
   Sparkles,
@@ -30,10 +31,9 @@ import SocialImpactBanner from "@/components/SocialImpactBanner";
 import NGOPartnership from "@/components/NGOPartnership";
 
 const stats = [
-  { value: "10+", label: "Schools" },
-  { value: "200+", label: "Students" },
-  { value: "50+", label: "Teachers" },
-  { value: "10+", label: "Classes" },
+  { value: "3 months free for 2 Year Subscription", label: "" },
+  { value: "", label: "" },
+  { value: "1 month free for 1 Year Subscription", label: "" },
 ];
 
 const features = [
@@ -42,6 +42,12 @@ const features = [
     title: "AI-Powered Learning",
     description: "Personalized learning paths with adaptive algorithms that understand each student's unique needs.",
     color: "from-purple-500 to-pink-500",
+  },    
+  {
+    icon: ScanText,
+    title: "Custom OCR Pipeline",
+    description: "Extracts content from images and PDFs to automatically generate notes, homework, and assignments using AI.",
+    color: "from-yellow-500 to-orange-500",
   },
   {
     icon: GraduationCap,
@@ -55,12 +61,6 @@ const features = [
     description: "Real-time insights into student performance, attendance, and engagement metrics.",
     color: "from-green-500 to-emerald-500",
   },
-  // {
-  //   icon: Video,
-  //   title: "Live Classes",
-  //   description: "Seamless virtual classroom experience with screen sharing, whiteboard, and breakout rooms.",
-  //   color: "from-orange-500 to-red-500",
-  // },
   {
     icon: Users,
     title: "Homework Management",
@@ -289,30 +289,7 @@ export default function Home() {
         </div>
       </section>
 <RuralEducationGallery />
-      {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-secondary-900 via-secondary-800 to-secondary-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.02%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')]" />
-        
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-secondary-400 font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
      {/* <NGOImpactStats /> */}
 
@@ -604,7 +581,33 @@ export default function Home() {
       </section> */}
 
       {/* <SocialImpactBanner /> */}
-      <NGOPartnership />
+
+      <NGOPartnership /> 
+      
+      {/* Stats Section */}
+      <section className="py-20 bg-gradient-to-r from-secondary-900 via-secondary-800 to-secondary-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.02%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')]" />
+        
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-6 md:grid-cols-1 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-secondary-400 font-medium">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-24 bg-white relative overflow-hidden">
@@ -642,7 +645,8 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>      
+     
     </>
   );
 }
