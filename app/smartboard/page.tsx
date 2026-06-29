@@ -112,8 +112,8 @@ export default function SmartboardPage() {
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%232563EB%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-50" />
         
-        <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-blue-200 rounded-full blur-[120px] opacity-40" />
-        <div className="absolute bottom-20 left-0 w-[500px] h-[500px] bg-purple-200 rounded-full blur-[120px] opacity-40" />
+        <div className="absolute top-20 right-0 w-72 h-72 md:w-[500px] md:h-[500px] bg-blue-200 rounded-full blur-[80px] md:blur-[120px] opacity-40" />
+        <div className="absolute bottom-20 left-0 w-72 h-72 md:w-[500px] md:h-[500px] bg-purple-200 rounded-full blur-[80px] md:blur-[120px] opacity-40" />
         
         <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -146,14 +146,14 @@ export default function SmartboardPage() {
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl hover:shadow-primary-500/25 hover:-translate-y-1 transition-all"
+                  className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3 md:py-4 rounded-2xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl hover:shadow-primary-500/25 hover:-translate-y-1 transition-all"
                 >
                   Request Demo
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <button
                   onClick={() => setIsVideoOpen(true)}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-semibold bg-white text-secondary-700 border-2 border-secondary-200 hover:border-primary hover:text-primary transition-all"
+                  className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3 md:py-4 rounded-2xl font-semibold bg-white text-secondary-700 border-2 border-secondary-200 hover:border-primary hover:text-primary transition-all"
                 >
                   <Play className="w-5 h-5" />
                   See It In Action
@@ -167,7 +167,7 @@ export default function SmartboardPage() {
               className="relative"
             >
               <div className="bg-white rounded-3xl shadow-2xl shadow-primary-500/10 border border-secondary-100 overflow-hidden">
-                <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-4 flex items-center justify-between">
+                <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-4 md:px-6 py-3 md:py-4 flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <div className="flex gap-2">
                       <div className="w-3 h-3 rounded-full bg-red-400" />
@@ -199,26 +199,27 @@ export default function SmartboardPage() {
                       </div>
                     </div>
                     <div className="space-y-4">
-                      <div className="text-2xl font-bold text-secondary-900">Understanding Photosynthesis</div>
-                      <div className="flex gap-4">
-                        <div className="flex-1 bg-green-100 rounded-xl p-4">
-                          <div className="text-green-700 font-semibold">CO₂ + H₂O + Light</div>
+                      <div className="text-xl md:text-2xl font-bold text-secondary-900">Understanding Photosynthesis</div>
+                      <div className="flex flex-col sm:flex-row gap-2 md:gap-4">
+                        <div className="flex-1 bg-green-100 rounded-xl p-3 md:p-4">
+                          <div className="text-green-700 font-semibold text-sm md:text-base">CO₂ + H₂O + Light</div>
                           <div className="text-xs text-green-600 font-medium">Reactants</div>
                         </div>
-                        <div className="text-2xl text-secondary-400 flex items-center">→</div>
-                        <div className="flex-1 bg-green-200 rounded-xl p-4">
-                          <div className="text-green-800 font-semibold">C₆H₁₂O₆ + O₂</div>
+                        <div className="hidden sm:flex text-2xl text-secondary-400 items-center">→</div>
+                        <div className="flex sm:hidden text-xl text-secondary-400 items-center justify-center">↓</div>
+                        <div className="flex-1 bg-green-200 rounded-xl p-3 md:p-4">
+                          <div className="text-green-800 font-semibold text-sm md:text-base">C₆H₁₂O₆ + O₂</div>
                           <div className="text-xs text-green-700 font-medium">Products</div>
                         </div>
                       </div>
-                      <div className="flex gap-2 mt-4">
-                        <div className="w-20 h-16 bg-blue-200 rounded-xl flex items-center justify-center">
+                      <div className="flex flex-wrap gap-2 mt-4">
+                        <div className="w-16 h-12 md:w-20 md:h-16 bg-blue-200 rounded-xl flex items-center justify-center">
                           <span className="text-xs text-blue-700 font-semibold">Sun</span>
                         </div>
-                        <div className="w-20 h-16 bg-green-200 rounded-xl flex items-center justify-center">
+                        <div className="w-16 h-12 md:w-20 md:h-16 bg-green-200 rounded-xl flex items-center justify-center">
                           <span className="text-xs text-green-700 font-semibold">Plant</span>
                         </div>
-                        <div className="w-20 h-16 bg-yellow-200 rounded-xl flex items-center justify-center">
+                        <div className="w-16 h-12 md:w-20 md:h-16 bg-yellow-200 rounded-xl flex items-center justify-center">
                           <span className="text-xs text-yellow-700 font-semibold">O₂</span>
                         </div>
                       </div>
@@ -393,7 +394,7 @@ export default function SmartboardPage() {
               className="relative"
             >
               <div className="bg-white rounded-3xl shadow-2xl shadow-primary-500/10 border border-secondary-100 overflow-hidden">
-                <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-4 flex items-center justify-between">
+                <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-4 md:px-6 py-3 md:py-4 flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <div className="flex gap-2">
                       <div className="w-3 h-3 rounded-full bg-red-400" />

@@ -204,21 +204,21 @@ export default function Home() {
                   </div>
                   <div className="w-16" />
                 </div>
-                <div className="p-6 space-y-5">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-5">
-                      <div className="text-3xl font-bold text-primary">2,547</div>
-                      <div className="text-sm text-secondary-500 font-medium">Active Students</div>
+                <div className="p-4 md:p-6 space-y-4 md:space-y-5">
+                  <div className="grid grid-cols-2 gap-3 md:gap-4">
+                    <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-4 md:p-5">
+                      <div className="text-2xl md:text-3xl font-bold text-primary">2,547</div>
+                      <div className="text-xs md:text-sm text-secondary-500 font-medium">Active Students</div>
                     </div>
-                    <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-5">
-                      <div className="text-3xl font-bold text-green-600">94%</div>
-                      <div className="text-sm text-secondary-500 font-medium">Attendance</div>
+                    <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-4 md:p-5">
+                      <div className="text-2xl md:text-3xl font-bold text-green-600">94%</div>
+                      <div className="text-xs md:text-sm text-secondary-500 font-medium">Attendance</div>
                     </div>
                   </div>
-                  <div className="bg-secondary-50 rounded-2xl p-5">
+                  <div className="bg-secondary-50 rounded-2xl p-4 md:p-5">
                     <div className="flex justify-between items-center mb-3">
-                      <span className="text-sm font-semibold text-secondary-700">Class Performance</span>
-                      <span className="text-sm text-green-600 font-semibold">+12%</span>
+                      <span className="text-xs md:text-sm font-semibold text-secondary-700">Class Performance</span>
+                      <span className="text-xs md:text-sm text-green-600 font-semibold">+12%</span>
                     </div>
                     <div className="h-3 bg-secondary-200 rounded-full overflow-hidden">
                       <motion.div 
@@ -229,18 +229,18 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-4 text-center">
-                      <Brain className="w-7 h-7 text-purple-600 mx-auto mb-2" />
-                      <div className="text-sm font-semibold text-secondary-700">AI Insights</div>
+                  <div className="grid grid-cols-3 gap-2 md:gap-3">
+                    <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-3 md:p-4 text-center">
+                      <Brain className="w-6 h-6 md:w-7 md:h-7 text-purple-600 mx-auto mb-1 md:mb-2" />
+                      <div className="text-[10px] md:text-sm font-semibold text-secondary-700">AI Insights</div>
                     </div>
-                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 text-center">
-                      <Video className="w-7 h-7 text-blue-600 mx-auto mb-2" />
-                      <div className="text-sm font-semibold text-secondary-700">Live Classes</div>
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-3 md:p-4 text-center">
+                      <Video className="w-6 h-6 md:w-7 md:h-7 text-blue-600 mx-auto mb-1 md:mb-2" />
+                      <div className="text-[10px] md:text-sm font-semibold text-secondary-700">Live Classes</div>
                     </div>
-                    <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 text-center">
-                      <BarChart3 className="w-7 h-7 text-green-600 mx-auto mb-2" />
-                      <div className="text-sm font-semibold text-secondary-700">Analytics</div>
+                    <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-3 md:p-4 text-center">
+                      <BarChart3 className="w-6 h-6 md:w-7 md:h-7 text-green-600 mx-auto mb-1 md:mb-2" />
+                      <div className="text-[10px] md:text-sm font-semibold text-secondary-700">Analytics</div>
                     </div>
                   </div>
                 </div>
@@ -589,7 +589,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.02%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')]" />
         
         <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-6 md:grid-cols-1 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}

@@ -5,7 +5,7 @@ import { Heart, Sparkles } from "lucide-react";
 
 export default function MissionStatement() {
   return (
-    <section className="py-16 relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/background.webp)' }}>
+    <section className="py-10 md:py-16 relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/background.webp)' }}>
       <div className="absolute inset-0 bg-black/50" />
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -15,12 +15,12 @@ export default function MissionStatement() {
           className="max-w-4xl mx-auto text-center"
         >
           
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <Heart className="w-6 h-6 text-white" />
-            <span className="text-sm font-semibold text-white uppercase tracking-wider">Our Mission</span>
-            <Heart className="w-6 h-6 text-white" />
+          <div className="flex items-center justify-center gap-2 md:gap-3 mb-4 md:mb-6">
+            <Heart className="w-5 h-5 md:w-6 md:h-6 text-white" />
+            <span className="text-xs md:text-sm font-semibold text-white uppercase tracking-wider">Our Mission</span>
+            <Heart className="w-5 h-5 md:w-6 md:h-6 text-white" />
           </div>
-          <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
             Over 250 million children worldwide lack access to quality education. 
             Our LMS platform bridges the gap by providing accessible digital learning for underprivileged communities.
           </p>
@@ -29,7 +29,7 @@ export default function MissionStatement() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-base md:text-lg text-white/80 mt-5 font-medium"
+            className="text-sm md:text-base lg:text-lg text-white/80 mt-4 md:mt-5 font-medium"
           >
             Quality Education Should Not Depend on Privilege.
           </motion.p>

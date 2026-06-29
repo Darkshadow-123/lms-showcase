@@ -261,16 +261,18 @@ export default function FeaturesPage() {
             viewport={{ once: true }}
             className="bg-white rounded-3xl shadow-2xl shadow-primary-500/10 border border-secondary-100 overflow-hidden"
           >
-            <div className="bg-secondary-50 px-6 py-4 border-b border-secondary-100 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <div className="flex gap-1.5">
-                  <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
+            <div className="bg-secondary-50 px-4 md:px-6 py-3 md:py-4 border-b border-secondary-100 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-0">
+              <div className="flex items-center gap-2 w-full sm:w-auto justify-between sm:justify-start">
+                <div className="flex items-center gap-2">
+                  <div className="flex gap-1.5">
+                    <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
+                  </div>
+                  <span className="text-xs md:text-sm text-secondary-500 ml-2">Verity Dashboard</span>
                 </div>
-                <span className="text-sm text-secondary-500 ml-2">Verity Dashboard</span>
               </div>
-              <div className="flex gap-4 text-sm">
+              <div className="flex gap-3 md:gap-4 text-xs md:text-sm">
                 <span className="text-secondary-600">Students</span>
                 <span className="text-secondary-900 font-medium">Teachers</span>
                 <span className="text-secondary-600">Courses</span>

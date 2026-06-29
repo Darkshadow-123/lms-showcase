@@ -346,37 +346,37 @@ export default function AIFeaturesPage() {
             </div>
 
             <div className="bg-white rounded-2xl overflow-hidden shadow-2xl">
-              <div className="bg-gradient-to-r from-purple-500 to-blue-500 px-6 py-4">
+              <div className="bg-gradient-to-r from-purple-500 to-blue-500 px-4 md:px-6 py-3 md:py-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <div className="flex gap-1.5">
-                      <div className="w-3 h-3 rounded-full bg-red-400" />
-                      <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                      <div className="w-3 h-3 rounded-full bg-green-400" />
+                      <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-red-400" />
+                      <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-yellow-400" />
+                      <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-green-400" />
                     </div>
-                    <span className="text-white/80 text-sm">Verity AI Tutor</span>
+                    <span className="text-white/80 text-xs md:text-sm ml-1">Verity AI Tutor</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                    <span className="text-white/80 text-sm">Online</span>
+                    <span className="text-white/80 text-xs md:text-sm">Online</span>
                   </div>
                 </div>
               </div>
               
-              <div className="p-6 space-y-6">
-                <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold flex-shrink-0">
-                    <GraduationCap className="w-5 h-5" />
+              <div className="p-4 md:p-6 space-y-4 md:space-y-6">
+                <div className="flex gap-3 md:gap-4">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold flex-shrink-0">
+                    <GraduationCap className="w-4 h-4 md:w-5 md:h-5" />
                   </div>
                   <div className="flex-1">
-                    <div className="text-sm text-secondary-500 mb-1">AI Tutor says:</div>
-                    <div className="bg-purple-50 rounded-xl p-4 text-secondary-700">
+                    <div className="text-xs md:text-sm text-secondary-500 mb-1">AI Tutor says:</div>
+                    <div className="bg-purple-50 rounded-xl p-3 md:p-4 text-sm md:text-base text-secondary-700">
                       Hello! I'm your AI learning assistant. I can help you with:
                     </div>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3">
                   {[
                     { icon: FileQuestion, label: "Quiz Generator" },
                     { icon: BookOpen, label: "Homework Help" },
@@ -385,23 +385,23 @@ export default function AIFeaturesPage() {
                   ].map((item) => (
                     <button
                       key={item.label}
-                      className="flex items-center gap-3 p-3 rounded-xl bg-secondary-50 hover:bg-primary-50 transition-colors text-left"
+                      className="flex items-center gap-3 p-2 md:p-3 rounded-xl bg-secondary-50 hover:bg-primary-50 transition-colors text-left"
                     >
-                      <div className="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center">
-                        <item.icon className="w-5 h-5 text-primary" />
+                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                       </div>
-                      <span className="font-medium text-secondary-700">{item.label}</span>
+                      <span className="font-medium text-sm md:text-base text-secondary-700">{item.label}</span>
                     </button>
                   ))}
                 </div>
 
-                <div className="flex gap-2">
+                <div className="flex flex-col sm:flex-row gap-2">
                   <input
                     type="text"
                     placeholder="Ask me anything about your studies..."
-                    className="flex-1 px-4 py-3 rounded-xl border border-secondary-200 focus:border-primary focus:outline-none"
+                    className="flex-1 px-3 md:px-4 py-2 md:py-3 text-sm md:text-base rounded-xl border border-secondary-200 focus:border-primary focus:outline-none"
                   />
-                  <button className="px-6 py-3 rounded-xl bg-primary text-white font-medium hover:bg-primary-dark transition-colors">
+                  <button className="px-4 md:px-6 py-2 md:py-3 rounded-xl bg-primary text-white text-sm md:text-base font-medium hover:bg-primary-dark transition-colors whitespace-nowrap">
                     Ask
                   </button>
                 </div>
