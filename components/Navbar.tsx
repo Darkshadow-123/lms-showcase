@@ -265,7 +265,7 @@ export default function Navbar() {
                   Sign In
                 </Link> */}
                 <Link
-                  href="/mock-url"
+                  href="https://triallms-react.vercel.app/"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block w-full py-4 text-center rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-white transition-colors"
                 >
