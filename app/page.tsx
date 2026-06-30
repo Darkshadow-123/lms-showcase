@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { 
-  GraduationCap, 
-  Brain, 
-  BarChart3, 
-  Video, 
-  Users, 
+import {
+  GraduationCap,
+  Brain,
+  BarChart3,
+  Video,
+  Users,
   BookMarked,
   ArrowRight,
   Play,
@@ -42,7 +42,7 @@ const features = [
     title: "AI-Powered Learning",
     description: "Personalized learning paths with adaptive algorithms that understand each student's unique needs.",
     color: "from-purple-500 to-pink-500",
-  },    
+  },
   {
     icon: ScanText,
     title: "Custom OCR Pipeline",
@@ -101,15 +101,15 @@ const testimonials = [
 
 const trustedBy = [
   "Arunachal pradesh",
-"Assam",
-"Bihar",
-"Manipur", 
-"Mizoram",
-"Meghalaya",
-"Nagaland",
-"Sikkim",
-"Tripura",
-"West Bengal"
+  "Assam",
+  "Bihar",
+  "Manipur",
+  "Mizoram",
+  "Meghalaya",
+  "Nagaland",
+  "Sikkim",
+  "Tripura",
+  "West Bengal"
 ];
 
 export default function Home() {
@@ -118,10 +118,10 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-purple-50">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%232563EB%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-50" />
-        
+
         <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-primary-200 rounded-full blur-[120px] opacity-40" />
         <div className="absolute bottom-20 left-0 w-[500px] h-[500px] bg-purple-200 rounded-full blur-[120px] opacity-40" />
-        
+
         <div className="container mx-auto px-4 md:px-6 lg:px-8 py-32 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
@@ -135,22 +135,22 @@ export default function Home() {
                 transition={{ delay: 0.1 }}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 to-purple-500/10 text-primary-600 font-semibold text-sm mb-6 border border-primary/20"
               >
-                
+
                 Trusted in  5+ States
               </motion.div>
-              
+
               <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-secondary-900 leading-[1.1] mb-6">
                 Transform Education with{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-600 to-pink-500">
                   AI-Powered LMS
                 </span>
               </h1>
-              
+
               <p className="text-lg md:text-xl text-secondary-600 mb-8 max-w-xl leading-relaxed">
-                Complete school management solution with smart classrooms, advanced analytics, 
+                Complete school management solution with smart classrooms, advanced analytics,
                 and intelligent learning tools designed for modern educational institutions.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
                 <Link
                   href="/contact"
@@ -167,7 +167,7 @@ export default function Home() {
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
-              
+
               {/* <div className="flex flex-wrap items-center gap-6 text-sm">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
@@ -221,11 +221,11 @@ export default function Home() {
                       <span className="text-xs md:text-sm text-green-600 font-semibold">+12%</span>
                     </div>
                     <div className="h-3 bg-secondary-200 rounded-full overflow-hidden">
-                      <motion.div 
+                      <motion.div
                         initial={{ width: 0 }}
                         animate={{ width: "75%" }}
                         transition={{ duration: 1, delay: 0.5 }}
-                        className="h-full bg-gradient-to-r from-primary to-purple-500 rounded-full" 
+                        className="h-full bg-gradient-to-r from-primary to-purple-500 rounded-full"
                       />
                     </div>
                   </div>
@@ -245,7 +245,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              
+
               <motion.div
                 animate={{ y: [0, -15, 0] }}
                 transition={{ duration: 5, repeat: Infinity }}
@@ -288,10 +288,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-<RuralEducationGallery />
+      <RuralEducationGallery />
 
 
-     {/* <NGOImpactStats /> */}
+      {/* <NGOImpactStats /> */}
 
       {/* Features Section */}
       <section className="py-24 bg-secondary-50">
@@ -309,7 +309,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-lg text-secondary-600">
-              Comprehensive tools designed to streamline operations, enhance learning outcomes, 
+              Comprehensive tools designed to streamline operations, enhance learning outcomes,
               and empower educators with data-driven insights.
             </p>
           </motion.div>
@@ -366,14 +366,14 @@ export default function Home() {
               </p>
               <ul className="space-y-4">
                 {[
-                   "AI-driven content recommendations",
-                   "Progress and performance dashboards",
-                   "Unique Assessments for each student",
-                   "Role-based access control",
-                   "Mobile-friendly learning experience",
-                   "Integrations with existing tools",
-                   "Secure virtual infrastructure",
-                   "Auto-generated Reports of Student performance"
+                  "AI-driven content recommendations",
+                  "Progress and performance dashboards",
+                  "Unique Assessments for each student",
+                  "Role-based access control",
+                  "Mobile-friendly learning experience",
+                  "Integrations with existing tools",
+                  "Secure virtual infrastructure",
+                  "Auto-generated Reports of Student performance"
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-secondary-700 font-medium">
                     <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
@@ -433,8 +433,8 @@ export default function Home() {
                             <span className="font-semibold text-secondary-900">{subject.progress}%</span>
                           </div>
                           <div className="h-2.5 bg-secondary-200 rounded-full overflow-hidden">
-                            <div 
-                              className="h-full bg-gradient-to-r from-primary to-purple-500 rounded-full" 
+                            <div
+                              className="h-full bg-gradient-to-r from-primary to-purple-500 rounded-full"
                               style={{ width: `${subject.progress}%` }}
                             />
                           </div>
@@ -451,12 +451,12 @@ export default function Home() {
 
       {/* <StudentStories /> */}
       {/* <VolunteerTeachers /> */}
-      
+
 
       {/* AI Features Teaser */}
       <section className="py-24 bg-gradient-to-br from-purple-900 via-secondary-900 to-primary-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.02%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')]" />
-        
+
         <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -471,7 +471,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-lg text-secondary-300">
-              Our AI engine analyzes student performance, identifies learning gaps, and 
+              Our AI engine analyzes student performance, identifies learning gaps, and
               provides personalized recommendations to improve outcomes.
             </p>
           </motion.div>
@@ -582,14 +582,14 @@ export default function Home() {
 
       {/* <SocialImpactBanner /> */}
 
-      <NGOPartnership /> 
-      
+      <NGOPartnership />
+
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-secondary-900 via-secondary-800 to-secondary-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.02%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')]" />
-        
+
         <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 md:gap-12">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -612,7 +612,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-purple-500/5 to-primary/5" />
-        
+
         <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -624,7 +624,7 @@ export default function Home() {
               Ready to Transform Your Institution?
             </h2>
             <p className="text-xl text-secondary-600 mb-10 max-w-2xl mx-auto">
-              Join Verity to deliver 
+              Join Verity to deliver
               world-class education with the power of AI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -645,8 +645,8 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
-      </section>      
-     
+      </section>
+
     </>
   );
 }
