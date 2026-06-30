@@ -219,7 +219,7 @@ export default function Navbar() {
             className="xl:hidden glass border-t border-secondary-100 overflow-hidden"
           >
             <motion.div
-              className="container mx-auto px-4 py-4 space-y-2"
+              className="container mx-auto px-4 py-3 space-y-1 max-h-[75vh] overflow-y-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.1 }}
@@ -235,7 +235,7 @@ export default function Navbar() {
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={cn(
-                      "block py-4 px-5 rounded-xl font-medium transition-all relative",
+                      "block py-3 px-4 rounded-xl font-medium transition-all relative",
                       isActive(link.href)
                         ? "text-primary bg-primary/10"
                         : "text-secondary-700 hover:bg-secondary-50"
@@ -245,7 +245,7 @@ export default function Navbar() {
                     {isActive(link.href) && (
                       <motion.div
                         layoutId="mobile-navbar-indicator"
-                        className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 rounded-r-full bg-primary"
+                        className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-5 rounded-r-full bg-primary"
                       />
                     )}
                   </Link>
@@ -255,26 +255,26 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="pt-4 space-y-3"
+                className="pt-2 pb-4 space-y-2"
               >
                 {/* <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block w-full py-4 text-center rounded-xl font-semibold text-secondary-700 hover:bg-secondary-50 transition-colors border border-secondary-200"
+                  className="block w-full py-3 text-center rounded-xl font-semibold text-secondary-700 hover:bg-secondary-50 transition-colors border border-secondary-200"
                 >
                   Sign In
                 </Link> */}
                 <Link
                   href="https://triallms-react.vercel.app/"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block w-full py-4 text-center rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-white transition-colors"
+                  className="block w-full py-3 text-center rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-white transition-colors"
                 >
                   Try For Free
                 </Link>
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block w-full py-4 text-center rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-white transition-colors"
+                  className="block w-full py-3 text-center rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-white transition-colors"
                 >
                   Book a Demo
                 </Link>
